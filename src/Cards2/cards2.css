@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    .cards {
+        width: 220px;
+        border: 2px solid rgba(128, 128, 128, 0.48);
+        border-radius: 5px;
+        padding: 20px;
+        .title {
+            font-size: 21px;
+            font-weight: bold;
+        }
+    }
+
+    .line {
+        width: 2px;
+        height: 30px;
+        background-color: black;
+    }
+
+}
