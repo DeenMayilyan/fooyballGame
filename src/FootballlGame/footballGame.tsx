@@ -1,11 +1,14 @@
 import {Box, Button} from "@mui/material";
 import {useState} from "react";
 import './football.css';
+import HeaderForScore from "../HeaderForScore/HeaderForScore.tsx";
 
 
 const FootbolGame = () => {
     const [leftRight, setLeftRight] = useState<number>(50)
     const [topBottom, setTopBottom] = useState<number>(0)
+    const [team1Score, setTeam1Score] = useState<number>(3)
+    const [team2Score, setTeam2Score] = useState<number>(7)
 
     const Click = (index:number) => {
         if(index === 1) {
@@ -27,10 +30,11 @@ const FootbolGame = () => {
             setTopBottom(100)
         }
     }
-
     return (
         <Box>
-            0:0
+            <Box>
+                <HeaderForScore team1Score={team1Score} team2Score={team2Score} />
+            </Box>
             <Box sx={{
                 width: '100vw',
                 height: '100vh',
